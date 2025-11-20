@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Planner Séries Muscles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Planner Séries Muscles</h1>
+<p class="subtitle">
+6 séries équivalentes / semaine / muscle • 1 série / jour par défaut
+</p>
+</header>
+
+<main>
+<!-- AJOUTER UNE SÉRIE -->
+<section class="card">
+<h2>Ajouter une série</h2>
+<label for="muscleSelect">Muscle :</label>
+<select id="muscleSelect"></select>
+
+<label for="exerciseSelect">Exercice :</label>
+<select id="exerciseSelect"></select>
+
+
+<button id="addSeriesBtn">Ajouter la série</button>
+
+<p class="info">
+La date utilisée est celle d'aujourd'hui (basée sur ton appareil).<br />
+Tu peux logguer plusieurs séries dans la journée.
+</p>
+</section>
+
+<!-- TABLEAU MUSCLES -->
+<section class="card">
+<h2>État des muscles</h2>
+<table>
+<thead>
+<tr>
+<th>Muscle</th>
+<th>Séries équiv. (7 jours)</th>
+<th>Objectif</th>
+<th>Statut aujourd'hui</th>
+</tr>
+</thead>
+<tbody id="muscleTableBody">
+<!-- rempli en JS -->
+</tbody>
+</table>
+</section>
+
+<!-- JOURNAL -->
+<section class="card">
+<h2>Journal des derniers jours</h2>
+<div id="logContainer"></div>
+</section>
+
+<!-- RESET -->
+<section class="card danger">
+<h2>Options</h2>
+<button id="resetBtn">Réinitialiser toutes les données</button>
+<p class="warning">
+Attention : supprime tout l'historique stocké dans ton navigateur
+(localStorage) pour cette app.
+</p>
+</section>
+</main>
+
+<footer>
+<small>App perso muscu • données stockées en local sur ton appareil</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
